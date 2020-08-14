@@ -2,6 +2,8 @@ pipelines:
   - name: pipeline_custom_docker_image
     steps:
       - name: custom_docker_image
+        configuration:
+          nodePool: u18-static     
         type: Bash
         configuration:
           inputResources:

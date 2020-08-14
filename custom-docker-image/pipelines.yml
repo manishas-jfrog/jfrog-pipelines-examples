@@ -1,0 +1,21 @@
+pipelines:
+  - name: pipeline_custom_docker_image
+    steps:
+      - name: custom_docker_image
+        type: Bash
+        configuration:
+          inputResources:
+            - name: dbp_image
+          runtime:
+            type: image
+            image:
+              custom:
+                name: $res_image_pipelinedbp_imageName
+                tag: $res_image_pipelinedbp_imageTag
+                registry: jfrog_artifactory_int
+                sourceRepository: docker-local
+                autoPull: true
+        execution:
+          onExecute:
+            - echo $step_image_name
+            - echo $step_image_tag

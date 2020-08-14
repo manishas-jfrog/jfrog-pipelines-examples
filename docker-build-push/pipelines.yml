@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: jfrog_github_int   # replace with your integration
-      path: manishas/docker-build-push    # replace with your repository name
+      path: manishas-jfrog/docker-build-push    # replace with your repository name
       branches:
         include: master
 

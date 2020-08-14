@@ -10,8 +10,8 @@ pipelines:
             type: image
             image:
               custom:
-                name: $res_image_pipelinedbp_imageName
-                tag: $res_image_pipelinedbp_imageTag
+                name: $res_dbp_image_imageName
+                tag: $res_dbp_image_imageTag
                 registry: jfrog_artifactory_int
                 sourceRepository: docker-local
                 autoPull: true

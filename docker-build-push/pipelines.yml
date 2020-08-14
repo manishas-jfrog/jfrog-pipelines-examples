@@ -6,6 +6,8 @@ resources:
       path: manishas-jfrog/jfrog-pipelines-examples    # replace with your repository name
       branches:
         include: master
+      files:
+        include: "docker-build-push/.*"
 
   - name: dbp_image
     type: Image
